@@ -1,0 +1,12 @@
+# ビルドコンテナの名前を定義
+identidock:
+  build: .
+  # ポートを公開
+  ports:
+    - "5000:5000"
+  environment:
+  # 環境を設定
+    ENV: DEV
+    # ボリュームを設定
+  volumes:
+    - ./app:/app
